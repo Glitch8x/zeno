@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Build WhatsApp message
         const waMsg = encodeURIComponent(
-            `Hi ZENO 👋\n\nI'd like to place an order:\n\n${itemLines}\n\nTotal: $${total.toFixed(2)}\n\nOrder Ref: ${orderRef}\n\nShip to:\n${shippingInfo.name}\n${shippingInfo.address}, ${shippingInfo.city} ${shippingInfo.postal}\nPhone: ${shippingInfo.phone}`
+            `Hi ZENO STORE 👋\n\nI'd like to place an order:\n\n${itemLines}\n\nTotal: $${total.toFixed(2)}\n\nOrder Ref: ${orderRef}\n\nShip to:\n${shippingInfo.name}\n${shippingInfo.address}, ${shippingInfo.city} ${shippingInfo.postal}\nPhone: ${shippingInfo.phone}`
         );
         const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`;
 
@@ -546,7 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .total-row td { font-weight: bold; font-size: 1.1rem; border-bottom: none; padding-top: 1.2rem; }
                 .footer { margin-top: 3rem; font-size: 0.78rem; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5rem; }
             </style></head><body>
-            <h1>ZENO</h1>
+            <h1>ZENO STORE</h1>
             <div class="subtitle">Order Invoice</div>
             <div class="section">
                 <div class="label">Order Reference</div>
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <tr class="total-row"><td>Total</td><td></td><td>$${total.toFixed(2)}</td></tr>
                 </tbody>
             </table>
-            <div class="footer">ZENO Lifestyle · Thank you for your order. Payment via WhatsApp is expected within 24h of confirmation.</div>
+            <div class="footer">ZENO STORE Lifestyle · Thank you for your order. Payment via WhatsApp is expected within 24h of confirmation.</div>
             </body></html>
         `;
 
