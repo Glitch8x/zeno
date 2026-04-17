@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeno | The New Minimal</title>
+    <meta name="description" content="Curated essentials for the modern sanctuary.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Exclusive Auth Gate -->
+    <div id="login-wall">
+        <!-- Auth Wall Top Nav -->
+        <div class="wall-nav">
+            <div class="logo" style="font-size: 1.4rem;">ZENO</div>
+            <div class="wall-nav-actions">
+                <button class="wall-tab-btn active" id="wall-tab-login">Log In</button>
+                <button class="wall-tab-btn" id="wall-tab-signup">Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Split Screen Body -->
+        <div class="wall-split">
+            <!-- Left: Form -->
+            <div class="wall-form-col">
+                <div id="wall-auth-container"></div>
+            </div>
+
+            <!-- Right: Illustration -->
+            <div class="wall-illus-col">
+                <img src="/auth_illustration.png" alt="Welcome illustration" class="wall-illustration">
+                <div class="wall-illus-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application (Hidden by Default) -->
+    <div id="app-content" style="display: none;">
+        <header>
+        <div class="logo">ZENO</div>
+        <nav>
+            <ul id="nav-main-list">
+                <li><a class="nav-link active" id="nav-home" style="cursor: pointer;">Home</a></li>
+                <li><a class="nav-link" id="nav-shop" style="cursor: pointer;">Shop</a></li>
+                <li id="admin-nav-item" style="display: none;"><a href="admin.html" class="nav-link" style="color:var(--text-main); font-weight:700;"><span style="font-size:1.1rem; margin-right:4px;">✧</span>Admin</a></li>
+            </ul>
+            <div class="utility-icons">
+                <span class="auth-links">
+                    <!-- Auth UI Injection -->
+                    <a class="nav-link" id="login-link">Login</a>
+                </span>
+                <div class="cart-icon open-cart">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="category-nav" id="category-nav" style="display: none;">
+        <a class="category-link">New Arrivals</a>
+        <a class="category-link">Kitchen</a>
+        <a class="category-link">Living Room</a>
+        <a class="category-link">Textiles</a>
+        <a class="category-link">Wellness</a>
+    </div>
+
+    <main>
+        <section class="hero scroll-reveal" id="hero-section">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000" alt="Lifestyle" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <span class="product-category" style="color: white; margin-bottom: 2rem; display: block;">The Art of Living</span>
+                    <h1>The New Sanctuary</h1>
+                    <p>Conscious designs for your most personal spaces.</p>
+                    <a class="btn-link" onclick="document.querySelector('.product-grid').scrollIntoView({behavior: 'smooth'})">Explore Collection</a>
+                </div>
+            </div>
+
+            <!-- Lifestyle Hotspots -->
+            <div class="hotspot" style="top: 40%; left: 30%;">
+                <div class="hotspot-card">
+                    <h4>Stone Vase</h4>
+                    <span>$68.00</span>
+                </div>
+            </div>
+            <div class="hotspot" style="top: 65%; left: 70%;">
+                <div class="hotspot-card">
+                    <h4>Raw Linen Throw</h4>
+                    <span>$145.00</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="grid-header scroll-reveal">
+                <div>
+                    <span class="product-category">Curation 01</span>
+                    <h2>Essentials</h2>
+                </div>
+            </div>
+            <div class="product-grid">
+                <!-- Products dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 4rem 0 2rem;">
+        <div style="color: var(--text-muted); font-size: 0.75rem;">
+            &copy; 2026 ZENO LIFESTYLE. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <span class="close-cart" style="cursor: pointer; font-size: 1.5rem;">×</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Estimated Total</span>
+                <span class="cart-total-value">$0.00</span>
+            </div>
+            <button class="btn checkout-btn" style="width: 100%;">Complete Checkout</button>
+        </div>
+    </div>
+
+    <!-- General Overlay for Modals/Cart -->
+    <div class="overlay"></div>
+    </div> <!-- Close app-content -->
+
+    <script src="script.js"></script>
+</body>
+</html>
